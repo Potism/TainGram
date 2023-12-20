@@ -24,6 +24,11 @@ export const sidebarLinks = [
     route: "/create-post",
     label: "Create Post",
   },
+  {
+    imgURL: "/assets/images/discord-mark.png",
+    route: "/discord",
+    label: "Discord",
+  },
 ];
 
 export const bottombarLinks = [
@@ -46,5 +51,10 @@ export const bottombarLinks = [
     imgURL: "/assets/icons/gallery-add.png",
     route: "/create-post",
     label: "Create",
+  },
+  {
+    imgURL: "/assets/images/discord-mark.png",
+    route: "/discord",
+    label: "Discord",
   },
 ];
