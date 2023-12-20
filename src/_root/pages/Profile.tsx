@@ -68,11 +68,11 @@ const Profile = () => {
 
               <StatBlock
                 value={currentUser.followers ? currentUser.followers.length : 0}
-                label="Followers"
+                label="followers"
               />
               <StatBlock
                 value={currentUser.following ? currentUser.following.length : 0}
-                label="Following"
+                label="following"
               />
             </div>
 
