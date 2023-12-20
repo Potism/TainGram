@@ -32,7 +32,8 @@ const FileUploader = ({ fieldChange, mediaUrl }: FileUploaderProps) => {
   return (
     <div
       {...getRootProps()}
-      className="flex flex-center flex-col bg-dark-3 rounded-xl cursor-pointer">
+      className="flex flex-center flex-col bg-dark-3 rounded-xl cursor-pointer"
+    >
       <input {...getInputProps()} className="cursor-pointer" />
 
       {fileUrl ? (
@@ -45,7 +46,7 @@ const FileUploader = ({ fieldChange, mediaUrl }: FileUploaderProps) => {
       ) : (
         <div className="file_uploader-box ">
           <img
-            src="/assets/icons/file-upload.svg"
+            src="/assets/icons/file-upload.png"
             width={96}
             height={77}
             alt="file upload"
@@ -55,6 +56,9 @@ const FileUploader = ({ fieldChange, mediaUrl }: FileUploaderProps) => {
             Drag photo here
           </h3>
           <p className="text-light-4 small-regular mb-6">SVG, PNG, JPG</p>
+          <p className="text-light-4 small-regular mb-6">
+            Kapain nalang ang size ng photo
+          </p>
 
           <Button type="button" className="shad-button_dark_4">
             Select from computer

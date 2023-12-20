@@ -20,7 +20,7 @@ interface StabBlockProps {
 
 const StatBlock = ({ value, label }: StabBlockProps) => (
   <div className="flex-center gap-2">
-    <p className="small-semibold lg:body-bold text-primary-500">{value}</p>
+    <p className="small-semibold lg:body-bold text-rose-600">{value}</p>
     <p className="small-medium lg:base-medium text-light-2">{label}</p>
   </div>
 );
@@ -45,7 +45,7 @@ const Profile = () => {
         <div className="flex xl:flex-row flex-col max-xl:items-center flex-1 gap-7">
           <img
             src={
-              currentUser.imageUrl || "/assets/icons/profile-placeholder.svg"
+              currentUser.imageUrl || "/assets/icons/profile-placeholder.png"
             }
             alt="profile"
             className="w-28 h-28 lg:h-36 lg:w-36 rounded-full"
@@ -77,9 +77,10 @@ const Profile = () => {
                 to={`/update-profile/${currentUser.$id}`}
                 className={`h-12 bg-dark-4 px-5 text-light-1 flex-center gap-2 rounded-lg ${
                   user.id !== currentUser.$id && "hidden"
-                }`}>
+                }`}
+              >
                 <img
-                  src={"/assets/icons/edit.svg"}
+                  src={"/assets/icons/edit.png"}
                   alt="edit"
                   width={20}
                   height={20}
@@ -104,9 +105,10 @@ const Profile = () => {
             to={`/profile/${id}`}
             className={`profile-tab rounded-l-lg ${
               pathname === `/profile/${id}` && "!bg-dark-3"
-            }`}>
+            }`}
+          >
             <img
-              src={"/assets/icons/posts.svg"}
+              src={"/assets/icons/posts.png"}
               alt="posts"
               width={20}
               height={20}
@@ -117,9 +119,10 @@ const Profile = () => {
             to={`/profile/${id}/liked-posts`}
             className={`profile-tab rounded-r-lg ${
               pathname === `/profile/${id}/liked-posts` && "!bg-dark-3"
-            }`}>
+            }`}
+          >
             <img
-              src={"/assets/icons/like.svg"}
+              src={"/assets/icons/like.png"}
               alt="like"
               width={20}
               height={20}
