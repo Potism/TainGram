@@ -62,8 +62,8 @@ const Profile = () => {
 
             <div className="flex gap-8 mt-10 items-center justify-center xl:justify-start flex-wrap z-20">
               <StatBlock
-                value={currentUser.posts ? currentUser.posts.length : 0}
-                label="Posts"
+                value={currentUser.post ? currentUser.post.length : 0}
+                label="post"
               />
 
               <StatBlock value={20} label="Followers" />
@@ -106,7 +106,7 @@ const Profile = () => {
       {currentUser.$id === user.id && (
         <div className="flex max-w-5xl w-full">
           <Link
-            to={`/profile/${id}`}
+            to={`/profile/${id}/`}
             className={`profile-tab rounded-l-lg ${
               pathname === `/profile/${id}` && "!bg-dark-3"
             }`}
@@ -140,7 +140,7 @@ const Profile = () => {
         <Route
           index
           element={
-            <GridPostList posts={currentUser.posts || []} showUser={false} />
+            <GridPostList posts={currentUser.post || []} showUser={false} />
           }
         />
         {currentUser.$id === user.id && (
