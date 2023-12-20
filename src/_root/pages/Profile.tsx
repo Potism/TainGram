@@ -66,8 +66,14 @@ const Profile = () => {
                 label="post"
               />
 
-              <StatBlock value={20} label="Followers" />
-              <StatBlock value={20} label="Following" />
+              <StatBlock
+                value={currentUser.followers ? currentUser.followers.length : 0}
+                label="Followers"
+              />
+              <StatBlock
+                value={currentUser.following ? currentUser.following.length : 0}
+                label="Following"
+              />
             </div>
 
             <p className="small-medium md:base-medium text-center xl:text-left mt-7 max-w-screen-sm">
