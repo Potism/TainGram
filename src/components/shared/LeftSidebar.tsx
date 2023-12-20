@@ -43,7 +43,7 @@ const LeftSidebar = () => {
         ) : (
           <Link to={`/profile/${user.id}`} className="flex gap-3 items-center">
             <img
-              src={user.imageUrl || "/assets/icons/profile-placeholder.svg"}
+              src={user.imageUrl || "/assets/icons/profile-placeholder.png"}
               alt="profile"
               className="h-14 w-14 rounded-full"
             />
@@ -63,10 +63,12 @@ const LeftSidebar = () => {
                 key={link.label}
                 className={`leftsidebar-link group ${
                   isActive && "bg-rose-600 hover:bg-rose-300"
-                }`}>
+                }`}
+              >
                 <NavLink
                   to={link.route}
-                  className="flex gap-4 items-center p-4">
+                  className="flex gap-4 items-center p-4"
+                >
                   <img
                     src={link.imgURL}
                     alt={link.label}
@@ -86,7 +88,8 @@ const LeftSidebar = () => {
       <Button
         variant="ghost"
         className="shad-button_ghost"
-        onClick={(e) => handleSignOut(e)}>
+        onClick={(e) => handleSignOut(e)}
+      >
         <img
           src="/assets/icons/logout.png"
           alt="logout"
